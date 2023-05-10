@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script type="module">
-        function checkUserHosting(hostEmail, callback) {
-            return fetch("https://api.spoonacular.com/recipes/complexSearch?number=2&apiKey=b4408aa9ab144e47ae2bf8eff93e72f5")
-                .then((response) => {
-                    return response.json().then((data) => {
-                        return data;
-                    }).catch((err) => {
-                        console.log(err);
-                    })
-                });
-        }
-        const getActivity = async () => {
-            let jsonData = await checkUserHosting();
-            return jsonData
-        }
-        let data = getActivity();
-        data.then((res) => console.log(res));
-    </script>
-</body>
-
+<html>
+    <head>
+        <title>HTML and GIT</title>
+        <link rel="icon" href="https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlJTIwZmxvd2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+    </head>
+    <body>
+        <!--
+            ctrl + /
+        -->
+        <h1>Chào anh em!</h1>
+        <h2>Learning Module 1: Bootcamp Preparation</h2>
+    </body>
 </html>
