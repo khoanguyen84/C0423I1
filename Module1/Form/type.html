@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Types</title>
+</head>
+
+<body>
+    <form action="#">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Introduction</td>
+                    <td>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Provinces</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">TT Huế</option>
+                            <option value="">Đà Nẵng</option>
+                            <option value="">Khánh Hòa</option>
+                            <option value="">Lâm Đống</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Avatar</td>
+                    <td>
+                        <input style="width: 100px;" type="image"
+                            src="https://img.freepik.com/premium-vector/portrait-young-man-with-beard-hair-style-male-avatar-vector-illustration_266660-423.jpg?w=2000">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of birth</td>
+                    <td>
+                        <input type="datetime-local">
+                        <br>
+                        <input type="date">
+                        <br>
+                        <input type="time">
+                        <br>
+                        <input type="week">
+                        <br>
+                        <input type="month">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        <input type="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" checked> Male
+                        <input type="radio" id="female" name="gender"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sports</td>
+                    <td>
+                        <input type="checkbox" checked> Football
+                        <input type="checkbox"> Swimming
+                        <input type="checkbox"> Walking
+                        <input type="checkbox" checked> Dancing
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fullname</td>
+                    <td>
+                        <input type="text" id="fn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" id="email" placeholder="Enter email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>
+                        <input type="tel" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PIN</td>
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keyword</td>
+                    <td>
+                        <input type="search">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <!-- <button type="submit">Process</button>
+                        <button type="reset">Cancel</button>
+                        <button type="button" onclick="alert('Hello anh em')">SayHi</button> -->
+                        <input type="submit" value="Đăng ký">
+                        <input type="reset" value="Hủy">
+                        <input type="button" value="Xin chào" onclick="alert('Hello anh em')">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
