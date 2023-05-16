@@ -5,37 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Basic</title>
+    <link rel="stylesheet" href="site.css">
     <style>
-        *{
-            color: blue;
-        }
-        h1{
-            background-color: green;
-            color: white;
-        }
-        #h_2, a{
-            text-decoration: underline;
-            text-shadow: 2px 2px 1px red;
-            color: green;
-        }
-
-        #h_2:hover{
-            background-color: yellow;
-            cursor: pointer;
-            text-align: right;
-        }
-       
-        .p_1{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 20px;
-            font-weight: bolder;
-        }
-        input[type='checkbox']:checked{
-            transform: scale(2);
-        }
-        input[type='text']{
-            padding: 20px;
-        }
+        
     </style>
 </head>
 <body>
@@ -44,7 +16,7 @@
         + cách 1 (inline style): viết mã css vào trong attribute style của element
         + cách 2 (internal style): viết mã css vào trong cặp thẻ style, cặp thẻ này thường được
                                 đặt trong thẻ head
-        + cách 3 (external style)
+        + cách 3 (external style): viết mã trong file .css và liên kết file .css này vào file html thông qua thẻ link
      -->
      <input type="checkbox"> Agree?
      <br>

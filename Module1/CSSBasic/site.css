@@ -1,0 +1,35 @@
+* {
+    color: blue;
+}
+
+h1 {
+    background-color: green;
+    color: white;
+}
+
+#h_2,
+a {
+    text-decoration: underline;
+    text-shadow: 2px 2px 1px red;
+    color: green;
+}
+
+#h_2:hover {
+    background-color: yellow;
+    cursor: pointer;
+    text-align: right;
+}
+
+.p_1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+input[type='checkbox']:checked {
+    transform: scale(2);
+}
+
+input[type='text'] {
+    padding: 20px;
+}
