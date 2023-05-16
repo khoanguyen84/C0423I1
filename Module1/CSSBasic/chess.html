@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+        #frame,
+        #frame td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #frame>tbody>tr:first-child>td{
+            padding: 20px;
+        }
+
+        #frame>tbody>tr>td:first-child{
+            padding: 20px;
+        }
+        .tbChess,
+        .tbChess td {
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+        }
+
+        .tbChess td {
+            padding: 25px;
+        }
+
+        .tbChess>tbody>tr:nth-child(odd)>td:nth-child(odd) {
+            background-color: orange;
+        }
+
+        .tbChess>tbody>tr:nth-child(odd)>td:nth-child(even) {
+            background-color: green;
+        }
+
+        .tbChess>tbody>tr:nth-child(even)>td:nth-child(even) {
+            background-color: orange;
+        }
+
+        .tbChess>tbody>tr:nth-child(even)>td:nth-child(odd) {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="frame">
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="4" rowspan="4">
+                    <table class="tbChess">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
