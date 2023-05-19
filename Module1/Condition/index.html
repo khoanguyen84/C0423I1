@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition Statement</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Radius</td>
+                <td>
+                    <input type="number" id="radius">
+                </td>
+            </tr>
+            <tr>
+                <td>Area</td>
+                <td>
+                    <input type="number" id="area">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="getCircleArea()">Process</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // cast/convert từ KLD này sang KLD number
+        // cách 1: sử dụng dấu +
+        // cách 2: sử dụng phương thức parseInt()/parseFloat()
+        // cách 3: đối tượng Number
+
+        function getCircleArea(){
+            // bước 1: lấy được giá trị radius
+            let radius = +(document.getElementById('radius').value);
+            let area = 0;
+            // bước 2: validate radius
+            if(radius >= 0){
+                // bước 3: tính diện tích
+                area = (Math.PI * radius**2).toFixed(2);
+                area = area + 10;
+            }
+            // bước 4: đưa kết quả vào trong input area
+            document.getElementById('area').value = area;
+        }
+    </script>
+</body>
+</html>
