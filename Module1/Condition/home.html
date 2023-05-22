@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+
+<body>
+    <p id="p_1"></p>
+    <div id="product">
+    </div>
+
+    <script>
+        let productName = 'iPhone 14 Pro Max';
+        let productPhoto = 'https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg';
+        let quantity = 4;
+        document.getElementById('product').innerHTML = `
+            <h3>${productName}</h3>
+            <img style="width: 100px; display: block; border: 1px solid red;" src="${productPhoto}" alt="">
+            ${quantity <= 5 ? '<span style="display:block;">Need to import this product</span>' : ''}
+            <button ${quantity <= 0 ? 'disabled' : ''} onclick='addToCart()'>Add to Cart</button>
+        `
+
+        // if (quantity > 5) {
+        //     document.getElementById('product').innerHTML = `
+        //     <h3>${productName}</h3>
+        //     <img style="width: 100px; display: block; border: 1px solid red;" src="${productPhoto}" alt="">
+        //     <button onclick='addToCart()'>Add to Cart</button>
+        // `
+        // }
+        // else {
+        //     if (quantity > 0 && quantity <= 5) {
+        //         document.getElementById('product').innerHTML = `
+        //     <h3>${productName}</h3>
+        //     <img style="width: 100px; display: block; border: 1px solid red;" src="${productPhoto}" alt="">
+        //     <span style="display:block;">Need to import this product</span>
+        //     <button onclick='addToCart()'>Add to Cart</button>
+        // `
+        //     }
+        //     else {
+        //         document.getElementById('product').innerHTML = `
+        //             <h3>${productName}</h3>
+        //             <img style="width: 100px; display: block; border: 1px solid red;" src="${productPhoto}" alt="">
+        //             <span style="display:block;">Need to import this product</span>
+        //             <button disabled onclick='addToCart()'>Add to Cart</button>
+        //             `
+        //     }
+        // }
+        function addToCart() {
+            alert('Product added to cart')
+        }
+
+        document.getElementById('p_1').innerHTML = '<img style="width: 100px; display: block; border: 1px solid red;" src="https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg" alt="">'
+    </script>
+</body>
+
+</html>

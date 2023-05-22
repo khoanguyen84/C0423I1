@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tiền điện</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>kWh</td>
+            <td>
+                <input type="number" id="kwh">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bậc
+            </td>
+            <td>
+                <input type="text" id="level">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tổng tiền
+            </td>
+            <td>
+                <input type="number" id="amount">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="getAmount_If()">Tính tiền(IF)</button>
+                <button onclick="getAmount_SwitchCase()">Tính tiền(SC)</button>
+                <button onclick="getAmount_Ternary()">Tính tiền(Ternary)</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        function getAmount_Ternary() {
+            let level = '';
+            let amount = 0;
+            let kwh = Number(document.getElementById('kwh').value);
+            kwh < 0 ? alert('kWh không hợp lệ') :
+                (kwh <= 50) ? (level = 'Bậc 1', amount = kwh * 1728) :
+                    (kwh <= 100) ? (level = 'Bậc 2', amount = 50 * 1728 + (kwh - 50) * 1786) :
+                        (kwh <= 200) ? (level = 'Bậc 3', amount = 50 * 1728 + 50 * 1786 * (kwh - 100) * 2074) :
+                            (kwh <= 300) ? (level = 'Bậc 4', amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + (kwh - 200) * 2612) :
+                                (kwh <= 400) ? (level = 'Bậc 5', amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + (kwh - 300) * 2919) :
+                                    (level = 'Bậc 6', amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + 100 * 2919 + (kwh - 400) * 3015)
+
+            document.getElementById('level').value = level;
+            document.getElementById('amount').value = amount;
+        }
+        function getAmount_SwitchCase() {
+            let level = '';
+            let amount = 0;
+            let kwh = Number(document.getElementById('kwh').value);
+            switch (true) {
+                case kwh >= 0 && kwh <= 50: {
+                    level = 'Bậc 1';
+                    amount = kwh * 1728;
+                    break;
+                }
+                case kwh > 50 && kwh <= 100: {
+                    level = 'Bậc 2';
+                    amount = 50 * 1728 + (kwh - 50) * 1786;
+                    break;
+                }
+                case kwh > 100 && kwh <= 200: {
+                    level = 'Bậc 3';
+                    amount = 50 * 1728 + 50 * 1786 * (kwh - 100) * 2074;
+                    break;
+                }
+                case kwh > 200 && kwh <= 300: {
+                    level = 'Bậc 4';
+                    amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + (kwh - 200) * 2612;
+                    break;
+                }
+                case kwh > 300 && kwh <= 400: {
+                    level = 'Bậc 5';
+                    amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + (kwh - 300) * 2919;
+                    break;
+                }
+                case kwh > 400: {
+                    level = 'Bậc 6';
+                    amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + 100 * 2919 + (kwh - 400) * 3015;
+                    break;
+                }
+                default: {
+                    alert('Sô kWh không hợp lệ');
+                    break;
+                }
+            }
+            document.getElementById('level').value = level;
+            document.getElementById('amount').value = amount;
+        }
+        function getAmount_If() {
+            let level = '';
+            let amount = 0;
+            let kwh = Number(document.getElementById('kwh').value);
+            if (kwh < 0) {
+                alert('Số kWh không hợp lệ'); ư
+            }
+            else if (kwh <= 50) {
+                level = 'Bậc 1';
+                amount = kwh * 1728;
+            }
+            else if (kwh > 50 && kwh <= 100) {
+                level = 'Bậc 2';
+                amount = 50 * 1728 + (kwh - 50) * 1786;
+            }
+            else if (kwh > 100 && kwh <= 200) {
+                level = 'Bậc 3';
+                amount = 50 * 1728 + 50 * 1786 * (kwh - 100) * 2074;
+            }
+            else if (kwh > 200 && kwh <= 300) {
+                level = 'Bậc 4';
+                amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + (kwh - 200) * 2612;
+            }
+            else if (kwh > 300 && kwh <= 400) {
+                level = 'Bậc 5';
+                amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + (kwh - 300) * 2919;
+            }
+            else {
+                level = 'Bậc 6';
+                amount = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + 100 * 2919 + (kwh - 400) * 3015;
+            }
+
+            document.getElementById('level').value = level;
+            document.getElementById('amount').value = amount;
+        }
+    </script>
+</body>
+
+</html>
