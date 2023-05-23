@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break</title>
+</head>
+
+<body>
+    <script>
+        // let number;
+        // do {
+        //     number = Number(prompt('Enter number: '))
+        //     if (number == 0) {
+        //         break;
+        //     }
+        // }
+        // while (Number.isNaN(number) || number != 0)
+
+        let number = Number(prompt('Enter number: '));
+        for (; ;) {
+            if(Number.isNaN(number) || number != 0){
+                number = Number(prompt('Enter number: '));
+            }
+            else {
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
