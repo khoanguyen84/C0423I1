@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+
+<body>
+    <ol id="student-list">
+    </ol>
+    <script>
+        let students = ["Tuấn", "Duy", "Đạt", "Phúc", "Khánh", "Trung"];
+        // for(let student of students){
+        //     document.getElementById('student-list').innerHTML += `<li>${student}</li>`
+        // }
+        let htmls = students.map(function(student, index){
+            return `<li>${student}</li>`
+        })
+        console.log(htmls);
+        console.log(htmls.join(''));
+        document.getElementById('student-list').innerHTML = htmls.join('')
+    </script>
+</body>
+
+</html>

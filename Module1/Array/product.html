@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+</head>
+
+<body>
+    <button onclick="addProduct()">Add Product</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbProducts">
+
+        </tbody>
+    </table>
+
+    <script>
+        let products = ["Laptop Dell", 'iPhone 14 Pro Max', 'Macbook', 'Oppo', 'Samsung Galaxy'];
+        let htmls = products.map(function (product, index) {
+            return `
+                    <tr>
+                        <td>${product}</td>
+                        <td>
+                            <Button onclick='removeProduct("${index}" )'>Remove</Button>
+                        </td>
+                    </tr>
+                    `
+        })
+        document.getElementById('tbProducts').innerHTML = htmls.join('');
+
+        function removeProduct(index) {
+            products.splice(index, 1);
+            let htmls = products.map(function (product, index) {
+                return `
+                    <tr>
+                        <td>${product}</td>
+                        <td>
+                            <Button onclick='removeProduct("${index}" )'>Remove</Button>
+                        </td>
+                    </tr>
+                    `
+            })
+            document.getElementById('tbProducts').innerHTML = htmls.join('');
+
+        }
+
+        function addProduct(){
+            let productName = prompt('Enter product name: ');
+            products.push(productName);
+            let htmls = products.map(function (product, index) {
+                return `
+                    <tr>
+                        <td>${product}</td>
+                        <td>
+                            <Button onclick='removeProduct("${index}" )'>Remove</Button>
+                        </td>
+                    </tr>
+                    `
+            })
+            document.getElementById('tbProducts').innerHTML = htmls.join('');
+        }
+    </script>
+</body>
+
+</html>
