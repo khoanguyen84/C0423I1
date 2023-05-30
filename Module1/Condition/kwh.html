@@ -37,6 +37,7 @@
                 <button onclick="getAmount_If()">Tính tiền(IF)</button>
                 <button onclick="getAmount_SwitchCase()">Tính tiền(SC)</button>
                 <button onclick="getAmount_Ternary()">Tính tiền(Ternary)</button>
+                <button id="btn">My Bottom</button>
             </td>
         </tr>
     </table>
@@ -136,6 +137,21 @@
             document.getElementById('level').value = level;
             document.getElementById('amount').value = amount;
         }
+
+    // document.addEventListener('click', function(e){
+    //     alert(`(${e.clientX}, ${e.clientY})`)
+    // })
+
+    document.addEventListener('keypress', function(e){
+        console.log(e.key)
+    })
+
+    // document.getElementById('btn').addEventListener('click', function() {
+    //     alert('Click on My Bottom')
+    // })
+    document.getElementById('btn').onclick = function(){
+        alert('Hello world');
+    }
     </script>
 </body>
 

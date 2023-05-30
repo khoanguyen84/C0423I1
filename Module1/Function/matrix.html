@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrixs</title>
+    <link rel="stylesheet" href="matrix.css">
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Size 1</td>
+                <td>
+                    <input type="number" id="size_1" value="7">
+                </td>
+            </tr>
+            <tr>
+                <td>Size 2</td>
+                <td>
+                    <input type="number" id="size_2" value="10">
+                </td>
+            </tr>
+            <tr>
+                <td>Min value</td>
+                <td>
+                    <input type="number" id="min" value="10">
+                </td>
+            </tr>
+            <tr>
+                <td>Max value</td>
+                <td>
+                    <input type="number" id="max" value="90">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="printMatrix()">Print Matrix</button>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <table border="1">
+        <tbody id="matrix">
+        </tbody>
+    </table>
+    <script src="matrix.js"></script>
+</body>
+</html>
