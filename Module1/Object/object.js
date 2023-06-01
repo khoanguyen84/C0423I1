@@ -38,34 +38,23 @@
 //         }
 //     ]
 // }
-let c0423i1 = [
-    {
-        email: "cuong@gmail.com",
-        gender: true,
-        dob: "10/10/2000",
-        studentCode: "CGG001",
-        name: "Cường",
-        hobbies: ["Đá banh", "Bơi lội", "Đọc sách"],
-        avatar: 'https://i.pravatar.cc/150?img=15'
-    },
-    {
-        name: "Khánh",
-        gender: true,
-        dob: "10/10/2000",
-        email: "khanh@gmail.com",
-        studentCode: "CGG002",
-        hobbies: ["Đá banh", "Bơi lội", "Đọc sách"],
-        avatar: 'https://i.pravatar.cc/150?img=10'
-    },
-    {
-        name: "Duy",
-        gender: true,
-        dob: "10/10/2000",
-        email: "duy@gmail.com",
-        studentCode: "CGG003",
-        hobbies: ["Đá banh", "Bơi lội", "Đọc sách"],
-        avatar: 'https://i.pravatar.cc/150?img=20'
+
+class Student{
+    constructor(studentCode, name, email, gender, dob, avatar, hobbies){
+        this.studentCode = studentCode;
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+        this.dob = dob;
+        this.avatar = avatar;
+        this.hobbies = hobbies
     }
+}
+
+let c0423i1 = [
+    new Student("CGG001", "Cường", "cuong@gmail.com", true, "10/10/2000", "https://i.pravatar.cc/150?img=15", ["Đá banh", "Bơi lội", "Đọc sách"]),
+    new Student("CGG002", "Khánh", "khanh@gmail.com", true, "10/10/2000", "https://i.pravatar.cc/150?img=10", ["Đá banh", "Bơi lội", "Đọc sách"]),
+    new Student("CGG003", "Duy", "duy@gmail.com", true, "10/10/2000", "https://i.pravatar.cc/150?img=20", ["Đá banh", "Bơi lội", "Đọc sách"])
 ]
 
 // console.log(c0423i1[0].hobbies[1]);
@@ -93,6 +82,21 @@ function renderStudents() {
         `
     })
     document.getElementById('tbStudents').innerHTML = htmls.join('')
+}
+
+function createStudent(){
+    let studentCode = document.getElementById('student-code').value;
+    let fullname = document.getElementById('fullname').value;
+    let avatar = document.getElementById('avatar').value;
+    let email = document.getElementById('email').value;
+    let hobbies = [document.getElementById('hobby').value];
+    let dob = document.getElementById('dob').value;
+    let gender = document.getElementsByName('gender')[0].checked;
+    let newStudent = new Student(studentCode, fullname, email, gender, dob, avatar, hobbies)
+
+    c0423i1.push(newStudent);
+    renderStudents();
+    
 }
 
 renderStudents()

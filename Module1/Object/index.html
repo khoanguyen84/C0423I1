@@ -11,23 +11,92 @@
 
 <body>
     <div class="container">
-        <table class="table table-snippet">
-            <thead class="thead">
-                <tr>
-                    <th>ID</th>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Avatar</th>
-                    <th>Gender</th>
-                    <th>Dob</th>
-                    <th>Email</th>
-                    <th>Hobbies</th>
-                </tr>
-            </thead>
-            <tbody id="tbStudents">
+        <div class="row">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Student Code</td>
+                        <td>
+                            <input type="text" id="student-code" value="CG00">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Fullname
+                        </td>
+                        <td>
+                            <input type="text" id="fullname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Avatar
+                        </td>
+                        <td>
+                            <input type="url" id="avatar">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" checked> Male
+                            <input type="radio" name="gender"> Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of birth
+                        </td>
+                        <td>
+                            <input type="date" id="dob">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            <input type="email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Hobbies
+                        </td>
+                        <td>
+                            <input type="text" id="hobby">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button onclick="createStudent()">Create Student</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <table class="table table-snippet">
+                <thead class="thead">
+                    <tr>
+                        <th>ID</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Avatar</th>
+                        <th>Gender</th>
+                        <th>Dob</th>
+                        <th>Email</th>
+                        <th>Hobbies</th>
+                    </tr>
+                </thead>
+                <tbody id="tbStudents">
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="object.js"></script>
 </body>
