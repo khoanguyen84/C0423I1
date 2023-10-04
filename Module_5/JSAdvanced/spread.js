@@ -50,3 +50,8 @@ function total (n1, n2, n3){
 total(...numbers)
 // let max = Math.max(...numbers)
 // console.log(max);
+let result = numbers.reduce(function(total, n){
+    console.log(total);
+    return total + n;
+}, '')
+console.log(result);
